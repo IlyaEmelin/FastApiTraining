@@ -15,7 +15,7 @@ class UserRelationMixin:
     @declared_attr
     def user_id(cls) -> Mapped[int]:
         return mapped_column(
-            ForeignKey("user_table.id"),
+            ForeignKey("users.id"),
             unique=cls._user_id_unique,
             nullable=cls._user_id_nullable,
         )
